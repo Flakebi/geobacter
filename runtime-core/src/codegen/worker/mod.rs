@@ -660,13 +660,13 @@ pub fn create_rustc_options() -> rustc_session::config::Options {
   opts.cg.llvm_args.push("-sroa-strict-inbounds".into());
   opts.debugging_opts.polly =
     opts.optimize == OptLevel::Aggressive;
-  opts.cg.llvm_args.push("-polly-run-inliner".into());
-  opts.cg.llvm_args.push("-polly-register-tiling".into());
-  opts.cg.llvm_args.push("-polly-check-vectorizable".into());
-  opts.cg.llvm_args.push("-enable-polly-aligned".into());
-  opts.cg.llvm_args.push("-polly-vectorizer=stripmine".into());
+  // opts.cg.llvm_args.push("-polly-run-inliner".into());
+  // opts.cg.llvm_args.push("-polly-register-tiling".into());
+  // opts.cg.llvm_args.push("-polly-check-vectorizable".into());
+  // opts.cg.llvm_args.push("-enable-polly-aligned".into());
+  // opts.cg.llvm_args.push("-polly-vectorizer=stripmine".into());
   //opts.cg.llvm_args.push("-polly-position=early".into());
-  opts.cg.llvm_args.push("-polly-enable-polyhedralinfo".into());
+  // opts.cg.llvm_args.push("-polly-enable-polyhedralinfo".into());
 
   // Disable these alignment assumptions inserted during optimization:
   // They aren't really helpful and in fact block a lot of possible mem2reg promotions as a
